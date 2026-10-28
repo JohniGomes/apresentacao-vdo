@@ -341,3 +341,4 @@ body.presenter{overflow:auto;background:var(--graphite)}#pm{padding:26px 34px;ma
 .slide:has(.sim) .kick,.slide:has(.sim) h2.t{position:relative;z-index:2;text-shadow:0 2px 18px rgba(0,0,0,.85)}
 .slide:has(.sim)::after{content:"";position:absolute;left:0;right:0;top:0;height:260px;background:linear-gradient(rgba(0,0,0,.65),transparent);z-index:1;pointer-events:none}
 .contact .who .nm{display:block;font:600 34px var(--sans);letter-spacing:.02em;margin-bottom:8px;color:var(--warm)}
+#b-notes,#b-pres{display:none!important}
