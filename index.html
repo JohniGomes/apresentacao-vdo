@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Inteligência Artificial na Arquitetura — Casa Entre Planos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="viewport">
+  <div id="stage" aria-live="off">
+    <div id="slides"></div>
+    <div id="hud">
+      <div id="chapter" class="mono"></div>
+      <div id="counter" class="mono"></div>
+      <div id="prog"><i></i></div>
+    </div>
+  </div>
+</div>
+<nav id="bar" aria-label="Controles da apresentação">
+  <button id="b-prev" title="Voltar (←)" aria-label="Voltar">←</button>
+  <button id="b-next" title="Avançar (→)" aria-label="Avançar">→</button>
+  <button id="b-toc" title="Índice (I)">Índice</button>
+  <button id="b-notes" title="Notas do apresentador (N)">Notas</button>
+  <button id="b-pres" title="Janela do apresentador (P)">Apresentador</button>
+  <button id="b-fs" title="Tela cheia (F)">Tela cheia</button>
+  <button id="b-help" title="Atalhos (?)">?</button>
+</nav>
+<aside id="toc" hidden aria-label="Índice de capítulos"><div class="panel"><header><h2>Índice</h2><button data-close aria-label="Fechar">×</button></header><div id="toc-body"></div><footer id="toc-assets" class="mono"></footer></div></aside>
+<aside id="notes" hidden aria-label="Notas do apresentador"><header><h2>Notas do apresentador</h2><button data-close aria-label="Fechar">×</button></header><div id="notes-body"></div></aside>
+<div id="help" hidden><div class="panel"><header><h2>Atalhos</h2><button data-close aria-label="Fechar">×</button></header>
+<dl><dt>→ / Espaço</dt><dd>Avançar (revela etapas)</dd><dt>←</dt><dd>Voltar</dd><dt>F</dt><dd>Tela cheia</dd><dt>I</dt><dd>Índice</dd><dt>N</dt><dd>Notas</dd><dt>P</dt><dd>Janela do apresentador</dd><dt>1–6</dt><dd>Variações / cenas do slide atual</dd><dt>Esc</dt><dd>Fechar painéis / ampliação / tela cheia</dd><dt>Home / End</dt><dd>Primeiro / último slide</dd></dl></div></div>
+<div id="lightbox" hidden role="dialog" aria-label="Imagem ampliada"><button data-close aria-label="Fechar">×</button><div id="lb-body"></div></div>
+<script src="js/project-data.js"></script>
+<script src="js/qrcode.js"></script>
+<script src="js/house.js"></script>
+<script src="js/diagrams.js"></script>
+<script src="js/interactions.js"></script>
+<script src="js/slides.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
