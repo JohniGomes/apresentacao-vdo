@@ -94,6 +94,6 @@ window.CONTACT = {
   name: 'Johni Michael Gomes',
   role: 'Desenvolvedor e Especialista em IA',
   instagram: 'johnisgomes_',
-  whatsapp: '5561981834833',
+  whatsapp: '5562981834833',
   whatsappMsg: 'Olá! Vi sua palestra sobre IA na arquitetura.'
 };
