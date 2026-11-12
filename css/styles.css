@@ -342,3 +342,10 @@ body.presenter{overflow:auto;background:var(--graphite)}#pm{padding:26px 34px;ma
 .slide:has(.sim)::after{content:"";position:absolute;left:0;right:0;top:0;height:260px;background:linear-gradient(rgba(0,0,0,.65),transparent);z-index:1;pointer-events:none}
 .contact .who .nm{display:block;font:600 34px var(--sans);letter-spacing:.02em;margin-bottom:8px;color:var(--warm)}
 #b-notes,#b-pres{display:none!important}
+
+.chat .shot.attach{display:flex;gap:28px;align-items:center;justify-content:center;background:#0f0f0f;padding:20px}
+.shot.attach figure{margin:0;flex:1;max-width:48%;display:flex;flex-direction:column;gap:10px;align-items:center}
+.shot.attach img{position:static!important;width:100%!important;height:auto!important;aspect-ratio:16/10;object-fit:cover;border-radius:14px}
+.shot.attach figcaption{color:#d8d4c8;font:500 15px var(--mono);letter-spacing:.06em;text-align:center}
+.pdesc{font-size:20px;line-height:1.4;color:var(--tech);margin:0}.atm.six .pdesc{font-size:19px}
+.pw .fig.au{align-self:center}

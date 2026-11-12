@@ -117,6 +117,21 @@
     notes: ['Cada ambiente tem o seu moodboard, montado a partir dos materiais da própria casa.', 'Mostre como a casa e os moodboards falam a mesma língua: concreto, madeira, pedra e vidro.', 'Aponte materiais e paleta; abra o README para mostrar a bíblia visual (project-data.js).', 'Vocês documentam as decisões visuais de um projeto? Onde?', 'O moodboard define a aparência; agora o programa: como os espaços se relacionam.']
   });
 
+  S.push({
+    id: 'c2b', ch: 'c2', title: 'Como criamos os moodboards', theme: 'light',
+    html: () => kick('CAPÍTULO 02 · PASSO A PASSO') + '<h2 class="t">Como criar moodboards: passo a passo</h2><div class="proc">' +
+      '<div class="au pc"><div class="ph"><b class="mono">01</b><h3>Pinterest</h3><p>Pesquise “moodboard” e faça um print de um modelo de formato.</p></div>' +
+      '<div class="win browser zoomable" tabindex="0" role="button" aria-label="Ampliar"><div class="bar"><i></i><i></i><i></i><span>pinterest.com</span></div><div class="shot"><img src="assets/images/processo-pinterest.webp" alt="Busca de moodboard no Pinterest"></div></div></div>' +
+      '<i class="au parrow">→</i>' +
+      '<div class="au pc"><div class="ph"><b class="mono">02</b><h3>Gemini</h3><p>Anexe a casa (materiais), o modelo (formato) e o pedido de cada ambiente.</p></div>' +
+      '<div class="win chat"><div class="bar"><i></i><i></i><i></i><span>gemini.google.com</span></div><div class="shot attach"><figure><img src="assets/images/hero.jpg" alt="Casa de referência"><figcaption>Casa de referência</figcaption></figure><figure><img src="assets/images/processo-pinterest.webp" alt="Modelo de moodboard"><figcaption>Modelo de moodboard</figcaption></figure></div></div></div>' +
+      '<i class="au parrow">→</i>' +
+      '<div class="au pc"><div class="ph"><b class="mono">03</b><h3>Um por ambiente</h3><p>Repita para cozinha, sala, banheiro e quarto.</p></div>' +
+      '<div class="fan">' + MOODS.map((m, i) => fig('mood-' + m[0], '<div class="waitbox"><b>' + m[0] + '</b></div>', m[1], '', 'card c' + i)).join('') + '</div></div></div>',
+    enter: el => { (el._ts || []).forEach(clearTimeout); const L = el.querySelectorAll('.au'); L.forEach(n => n.classList.remove('in')); el._ts = Array.from(L).map((n, i) => setTimeout(() => n.classList.add('in'), 500 + i * 900)); },
+    notes: ['O processo é simples e repetível.', 'Passo 1: busca no Pinterest e print de um modelo. Passo 2: no Gemini, a casa e o modelo anexados. Passo 3: repetir por ambiente.', 'Os três passos aparecem sozinhos.', 'Que ambiente você testaria primeiro?', 'Agora o render.']
+  });
+
   /* ---- Capítulo 03 ---- */
 
   S[S.length - 1].qa = 1;
@@ -132,6 +147,20 @@
   });
 
   S.push({
+    id: 'c4c', ch: 'c4', title: 'Passo a passo do render', theme: 'dark',
+    html: () => kick('CAPÍTULO 03 · PASSO A PASSO') + '<h2 class="t">Como gerar o render: passo a passo</h2><div class="split fill pw"><ol class="steps">' +
+      [['Acesse o Gemini ou o Flow', '<b>gemini.google.com</b> ou <b>flow.google.com</b>.'],
+       ['Escolha criar imagem', 'No Flow, selecione <b>criar imagem</b> e o modelo <b>Nano Banana</b>. No Gemini, use <b>Criar imagem</b>.'],
+       ['Anexe o print do projeto', 'Envie o print do modelo 3D: é ele que trava a geometria.'],
+       ['Peça o render', 'Descreva materiais, vegetação e luz, e gere algumas versões.'],
+       ['Escolha a mais fiel', 'Fique com a que mantém lajes, aberturas e câmera do print.']].map((x, i) =>
+        '<li class="au"><b class="mono">0' + (i + 1) + '</b><div><h3>' + x[0] + '</h3><p>' + x[1] + '</p></div></li>').join('') + '</ol>' +
+      fig('render-final', R({ light: 'golden', view: 'hero', alt: 'Render da Casa Entre Planos' }), '', '', 'wide zoomable au') + '</div>',
+    enter: el => { (el._ts || []).forEach(clearTimeout); const L = el.querySelectorAll('.au'); L.forEach(n => n.classList.remove('in')); el._ts = Array.from(L).map((n, i) => setTimeout(() => n.classList.add('in'), 500 + i * 900)); },
+    notes: ['O render depende de três coisas: ferramenta, print e pedido.', 'Percorra os cinco passos. Avise que a IA pode alterar a geometria: sempre compare com o print.', 'Os passos aparecem sozinhos.', 'Você prefere o Gemini ou o Flow para imagens?', 'Vamos comparar o print com o render.']
+  });
+
+  S.push({
     id: 'c4e', ch: 'c4', title: 'Comparação',
     html: () => kick('CAPÍTULO 03 · COMPARAÇÃO') + '<h2 class="t">Resultado</h2><div class="stack">' + U.compare(R({ style: 'model', light: 'manha', view: 'hero', alt: 'Print do modelo' }), R({ light: 'golden', view: 'hero', alt: 'Render' }), 'Print do modelo', 'Visualização', 'model-print', 'render-final') + '</div><div class="foot mono"><span class="badge b-ilus" data-badgeof="render-final">ILUSTRAÇÃO VETORIAL</span> Mesma casa e mesma câmera nos dois lados. ' + trans('Com a arquitetura realista, vejamos como a luz transforma a percepção do mesmo espaço.').replace('class="trans"', 'class="trans inline"') + '</div>',
     notes: ['A prova do método: a geometria permanece.', 'Arraste o controle e observe lajes, hall e vãos. Em um caso real, procure deformações.', 'Arraste devagar e pare em pontos de interesse.', 'Você assinaria embaixo desta imagem como representação do projeto?', 'Mesma casa, outras horas do dia.']
@@ -140,6 +169,29 @@
   /* ---- Capítulo 05 ---- */
   /* ---- Capítulo 06 ---- */
   const autoIn = (ms) => el => { (el._ts || []).forEach(clearTimeout); const L = el.querySelectorAll('.au'); L.forEach(n => n.classList.remove('in')); el._ts = Array.from(L).map((n, i) => setTimeout(() => n.classList.add('in'), 400 + i * ms)); };
+
+  const sceneGrid = f => '<div class="atm six">' + SCENES.map((sc, i) => '<div class="acell"><div class="fig"><div class="fig-media zoomable"><div class="tm" data-aimg="scene-' + (i + 1) + '">' + sc.th() + '</div></div></div><div><h3>0' + (i + 1) + ' · ' + sc.t + '</h3><p class="pdesc">' + f(sc) + '</p></div></div>').join('') + '</div>';
+
+  S.push({
+    id: 'c6b', ch: 'c6', title: 'Vídeo · passo 1: as cenas', theme: 'dark',
+    html: () => kick('CAPÍTULO 04 · PASSO 1 DE 3') + '<h2 class="t">Como criar um vídeo do projeto</h2><p class="lead sub-l"><b>Passo 1.</b> Acesse flow.google.com e crie as seis cenas a partir da imagem renderizada.</p>' + sceneGrid(sc => sc.d),
+    notes: ['O vídeo começa em imagens: seis cenas geradas a partir do render.', 'Explique as seis cenas: aérea, fachada, acesso, interior, materiais e entardecer.', 'Clique nas imagens para ampliar.', 'Qual cena você cortaria para um vídeo de 30 segundos?', 'Agora cada cena vira um vídeo.']
+  });
+
+  S.push({
+    id: 'c6b2', ch: 'c6', title: 'Vídeo · passo 2: um vídeo por cena', theme: 'dark',
+    html: () => kick('CAPÍTULO 04 · PASSO 2 DE 3') + '<h2 class="t">Como criar um vídeo do projeto</h2><p class="lead sub-l"><b>Passo 2.</b> No Google Flow, escolha o modelo de <b>vídeo</b> e crie um vídeo para cada cena.</p>' + sceneGrid(sc => sc.mov + ' · ' + sc.dur),
+    notes: ['Cada cena vira um clipe curto, com um movimento de câmera.', 'Gere duas ou três versões de cada cena e descarte as em que a casa deforma ou os materiais piscam.', 'Mostre o movimento de cada cena.', 'O que mais preocupa você em vídeo gerado por IA: deformação ou consistência?', 'Falta juntar tudo em um único vídeo.']
+  });
+
+  S.push({
+    id: 'c6b3', ch: 'c6', title: 'Vídeo · passo 3: montagem', theme: 'dark',
+    html: () => kick('CAPÍTULO 04 · PASSO 3 DE 3') + '<h2 class="t">Como criar um vídeo do projeto</h2><p class="lead sub-l"><b>Passo 3.</b> Junte todas as cenas em um único vídeo. Você pode usar o CapCut.</p><ol class="steps wide">' +
+      [['Abra o CapCut', 'No computador ou no celular, crie um novo projeto.'], ['Importe os seis clipes', 'Coloque-os na linha do tempo na ordem 1 → 6.'], ['Ajuste os cortes', 'Corte o início e o fim de cada clipe e adicione transições suaves.'], ['Inclua uma trilha', 'Escolha uma música calma, compatível com o ritmo das cenas.'], ['Exporte', 'Salve no formato e tamanho que preferir.']].map((x, i) =>
+        '<li class="au"><b class="mono">0' + (i + 1) + '</b><div><h3>' + x[0] + '</h3><p>' + x[1] + '</p></div></li>').join('') + '</ol>',
+    enter: el => { (el._ts || []).forEach(clearTimeout); const L = el.querySelectorAll('.au'); L.forEach(n => n.classList.remove('in')); el._ts = Array.from(L).map((n, i) => setTimeout(() => n.classList.add('in'), 500 + i * 900)); },
+    notes: ['A montagem é simples: ordem, cortes, trilha e exportação.', 'O CapCut é uma opção; qualquer editor serve.', 'Os passos aparecem sozinhos.', 'Qual editor de vídeo você já usa?', 'Veja o filme final.']
+  });
 
   S.push({
     id: 'c6c', ch: 'c6', title: 'O filme', theme: 'dark',

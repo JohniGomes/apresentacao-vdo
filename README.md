@@ -1,6 +1,6 @@
 # Inteligência Artificial na Arquitetura — Casa Entre Planos
 
-Apresentação navegável (11 slides, 16:9) em HTML/CSS/JS puro, sem build e sem dependências. Um único projeto conceitual, a **CASA ENTRE PLANOS**, atravessa seis ferramentas: situação, moodboard, bolhas, render, iluminação e filme.
+Apresentação navegável (16 slides, 16:9) em HTML/CSS/JS puro, sem build e sem dependências. Um único projeto conceitual, a **CASA ENTRE PLANOS**, atravessa seis ferramentas: situação, moodboard, bolhas, render, iluminação e filme.
 
 ## Executar
 Abra `index.html` no Chrome/Edge (duplo clique funciona). Opcional, servidor local:
