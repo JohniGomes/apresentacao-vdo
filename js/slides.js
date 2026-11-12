@@ -74,14 +74,14 @@
   S.push({
     id: 'capa', ch: 'abertura', title: 'Capa', theme: 'cover',
     html: () => '<div class="cover-bg">' + fig('hero', R({ view: 'hero', light: 'golden', alt: 'Casa Entre Planos ao fim de tarde' }), '', '', 'bleed') + '</div><div class="cover-shade"></div>' +
-      '<div class="cover-txt"><h1 class="a2">INTELIGÊNCIA ARTIFICIAL<br>NA ARQUITETURA</h1><p class="sub a3">Seis ferramentas para deixar o seu dia a dia mais produtivo.</p></div>' +
+      '<div class="cover-txt"><h1 class="a2">INTELIGÊNCIA ARTIFICIAL<br>NA ARQUITETURA</h1><p class="sub a3">Quatro ferramentas para deixar o seu dia a dia mais produtivo.</p></div>' +
       '<div class="cover-tag"><span class="badge b-ilus" data-badgeof="hero">ILUSTRAÇÃO VETORIAL</span></div>',
-    notes: ['Abrir com a imagem, não com o texto: esta é a casa que o público vai acompanhar até o final.', 'Apresente a proposta: um único projeto, a CASA ENTRE PLANOS, atravessando seis ferramentas. Avise que o lote é conceitual e que as imagens desta versão são ilustrações geradas por código a partir de uma mesma geometria.', 'Deixe a animação de entrada terminar; clique em “Iniciar” ou use a seta →.', 'Quem aqui já usou IA em algum momento do projeto de arquitetura?', 'Vamos começar pelo lugar: o terreno antes da casa.']
+    notes: ['Abrir com a imagem, não com o texto: esta é a casa que o público vai acompanhar até o final.', 'Apresente a proposta: um único projeto, a CASA ENTRE PLANOS, atravessando quatro ferramentas. Avise que o lote é conceitual e que as imagens desta versão são ilustrações geradas por código a partir de uma mesma geometria.', 'Deixe a animação de entrada terminar; clique em “Iniciar” ou use a seta →.', 'Quem aqui já usou IA em algum momento do projeto de arquitetura?', 'Vamos começar pelo lugar: o terreno antes da casa.']
   });
 
   S.push({
     id: 'jornada', ch: 'intro', title: 'A jornada', theme: 'dark',
-    html: () => kick('VISÃO GERAL') + '<h2 class="t">Como usar seis ferramentas de IA no seu dia a dia</h2><div class="journey">' +
+    html: () => kick('VISÃO GERAL') + '<h2 class="t">Como usar quatro ferramentas de IA no seu dia a dia</h2><div class="journey">' +
       [['01', 'Como criar o mapa de situação', 'Google Earth + Gemini'], ['02', 'Como criar moodboards', 'Pinterest + Gemini'], ['03', 'Como gerar o render a partir de um print', 'Nano Banana / Gemini'], ['04', 'Como criar o vídeo do projeto', 'Google Flow']].map(x => '<div><b>' + x[0] + '</b><h3>' + x[1] + '</h3><p>' + x[2] + '</p></div>').join('') + '</div>',
     notes: ['A narrativa é a construção progressiva de uma casa, não uma lista de ferramentas.', 'Passe os olhos pelas quatro etapas. Diga que a mesma casa aparece em todos.', 'Nenhuma.', 'Alguma dessas ferramentas é novidade para vocês?', 'Começamos pelo lugar: o terreno antes da casa.']
   });
